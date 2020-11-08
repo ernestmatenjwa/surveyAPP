@@ -1,6 +1,6 @@
     <?php
        include 'dbconnection.php';
-       $sql = "SELECT COUNT(*) as totalSurvey, AVG(age) as ageAverage, MAX(age) as oldest, MIN(age) as youngest
+       $sql = "SELECT COUNT(*) as totalSurvey, ROUND(AVG(age), 1) as ageAverage, MAX(age) as oldest, MIN(age) as youngest
            from surveytbl;";
 
    $results = mysqli_query($conn, $sql);
@@ -44,8 +44,8 @@
     $papAndV_fav = $data3['papAndV_fav']/$totalSurvey * 100;
 
     //querry to calculate average for people who like eat out, watch movies, watch tv and  listen radio 
-    $sql4 = "SELECT AVG(eatout) as eatOutAvg, AVG(watchMovies) as watchMoviesAvg,
-                   AVG(watchTV) as watchTV_Avg, AVG(listenRadio) as listenRadioAvg
+    $sql4 = "SELECT ROUND(AVG(eatout), 1) as eatOutAvg, ROUND(AVG(watchMovies), 1) as watchMoviesAvg,
+                   ROUND(AVG(watchTV), 1) as watchTV_Avg, ROUND(AVG(listenRadio), 1) as listenRadioAvg
                    from surveytbl;";
 
     $results4 = mysqli_query($conn, $sql4);
