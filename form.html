@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form survey</title>
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+
+
+    </div>
+    <div class="form__desc  text-center">
+        <h1>Take My Survey</h1>
+        <hr>
+    </div>
+
+    <form class="form col-md-6 offset-md-4" onsubmit=" return validate()" action="feedback.php" method="POST" name="form">
+        <div class="form__title">
+            Person Details
+        </div>
+
+
+        <div class="form__item form form-group">
+            <label for="lastname" class="form__label"> Last name </label>
+            <input class="form__input form-control " type="text" name="lastname" id="lastname"
+                placeholder="enter your last name" required title="lastname must not be empty and least 3 char long"
+                pattern="\S?{3,}">
+
+        </div>
+
+        <div class="form__item  form-group">
+            <label for="firstname" class="form__label"> first name </label>
+            <input class="form__input form-control" type="text" name="firstname" id="firstname"
+                placeholder="enter your firstname" title="fist name must not be empty and least 3 char long"
+                pattern="\S{2,}" required>
+
+        </div>
+
+        <div class="form__item  form-group">
+            <label for="number" class="form__label"> Contact Number </label>
+            <input class="form__input form__input--small form-control" type="number" name="number" id="number"
+                placeholder="enter contact number " title="must not be empty and least 10 char long" pattern="\d{10,12}"
+                required>
+
+        </div>
+
+        <div class="form__item  form-group">
+            <label for="date" class="form__label"> Date </label>
+            <input class="form__input form__input--small form-control" type="date" name="date" id="date"
+                placeholder="enter date " required>
+
+        </div>
+        <div class="form__item  form-group">
+            <label for="age" class="form__label"> Age </label>
+            <input class="form__input form__input--small form-control" type="number" name="age" id="age" min="5"
+                max="120" placeholder="enter your age " required>
+
+        </div>
+
+
+        <br>
+        <div class="form__item  ">
+            <p class=" form__title--small">What is your favourite food? (You can choose more than one answer)
+            </p>
+            <div class="form-check form-check-inline">
+                <label class="form__label--checkbox form-check-label" for="foodPZ">
+
+
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <label class="form__label--checkbox" for="foodPT">
+                    <input type="checkbox" name="foodPT" id="foodPT"> pasta
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div>
+                <label class="form__label--checkbox" for="foodPW">
+                    <input type="checkbox" name="foodPW" id="foodPW"> Pap and Wors
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div>
+                <label class="form__label--checkbox" for="foodCSF">
+                    <input type="checkbox" name="foodCSF" id="foodCSF"> Chicken stir fry
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div>
+                <label class="form__label--checkbox" for="foodBST">
+                    <input type="checkbox" name="foodBST" id="foodBST"> Bee stir fry
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div>
+                <label class="form__label--checkbox" for="foodO">
+                    <input type="checkbox" name="foodO" id="foodO"> Other
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+
+
+        <div>
+
+            <p class="form__title--small">On a scale of 1 to 5 indicate whether you strongly agree to
+                strongly disagree
+            </p>
+
+            <table style="border: 1px ;">
+                <thead class="form_title">
+                    <tr>
+                        <th>
+
+                        </th>
+                        <th>Strongly Agree <br /><strong>(1)</strong></th>
+                        <th> Agree <br /><strong>(2)</strong></th>
+                        <th>Neutral<br /><strong>(3)</strong></th>
+                        <th>Disagree <br /><strong>(4)</strong></th>
+                        <th>Strongly Disagree <br /><strong>(5)</strong></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>I like to eat out </td>
+                        <td><label for="scaleEat" class="form__radio"><input id="scaleEat" type="radio" name="scaleEat"
+                                    value="1">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleEat2" class="form__radio"><input id="scaleEat2" type="radio"
+                                    name="scaleEat" value="2">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleEat3" class="form__radio"><input id="scaleEat3" type="radio"
+                                    name="scaleEat" value="3">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleEat4" class="form__radio"><input id="scaleEat4" type="radio"
+                                    name="scaleEat" value="4">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleEat5" class="form__radio"><input id="scaleEat5" type="radio"
+                                    name="scaleEat" value="5">
+                                <span class="form__checkmark"></span></label></td>
+                    </tr>
+                    <tr>
+                        <td>I like to watch movies</td>
+                        <td><label for="scaleWM" class="form__radio"><input type="radio" name="scaleWM" id="scaleWM"
+                                    value="1">
+                                <span class="form__checkmark"></span></label>
+                        </td>
+                        <td><label for="scaleWM2" class="form__radio"><input type="radio" name="scaleWM" id="scaleWM2"
+                                    value="2">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWM3" class="form__radio"><input type="radio" name="scaleWM" id="scaleWM3"
+                                    value="3">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWM4" class="form__radio"><input type="radio" name="scaleWM" id="scaleWM4"
+                                    value="4">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWM5" class="form__radio"><input type="radio" name="scaleWM" id="scaleWM5"
+                                    value="5">
+                                <span class="form__checkmark"></span></label></td>
+
+                    </tr>
+                    <tr>
+                        <td>I like to watch TV</td>
+                        <td><label for="scaleWT" class="form__radio"><input type="radio" name="scaleWT" id="scaleWT"
+                                    value="1">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWT2" class="form__radio"><input type="radio" name="scaleWT" id="scaleWT2"
+                                    value="2">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWT3" class="form__radio"><input type="radio" name="scaleWT" id="scaleWT3"
+                                    value="3">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWT4" class="form__radio"><input type="radio" name="scaleWT" id="scaleWT4"
+                                    value="4">
+                                <span class="form__checkmark"></span></label></td>
+                        <td><label for="scaleWT5" class="form__radio"><input type="radio" name="scaleWT" id="scaleWT5"
+                                    value="5">
+                                <span class="form__checkmark"></span></label></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>I like to Listen to radio </td>
+
+                        <td><label for="scaleLR" class="form__radio"><input type="radio" name="scaleLR" id="scaleLR"
+                                    value="1">
+                                <span class="form__checkmark"></span></label></td>
+
+
+                        <td><label for="scaleLR2" class="form__radio"><input type="radio" name="scaleLR" id="scaleLR2"
+                                    value="2">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleLR3" class="form__radio"><input type="radio" name="scaleLR" id="scaleLR3"
+                                    value="3">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleLR4" class="form__radio"><input type="radio" name="scaleLR" id="scaleLR4"
+                                    value="4">
+                                <span class="form__checkmark"></span></label></td>
+
+                        <td><label for="scaleLR5" class="form__radio"><input type="radio" name="scaleLR" id="scaleLR5"
+                                    value="5">
+                                <span class="form__checkmark"></span></label></td>
+
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+
+            <div class=""><input class="btn btn-primary btn-lg" type="submit" name="submit" value="Submit" id="submit">
+            </div>
+
+    </form>
+
+
+    <script src="form.js"></script>
+</body>
+
+</html>

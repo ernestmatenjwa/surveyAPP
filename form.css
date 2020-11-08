@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body {
+    background: silver;
+    padding: 24px;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 70px;
+    margin: 50px 10% 3%;
+    color: #069696;
+ 
+ }
+ .form__title {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0 10%;
+    color: #087070;
+}
+.form__title--small{
+    font-size: 2em;
+    font-weight: 600;
+    color: #087070;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+}
+.form__label {
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 2em;
+    color: #069696;
+}
+
+.form__input {
+  
+    width: 15em;
+    padding: 0.8em;
+    font-size: x-large;
+    outline: none;
+    background: whitesmoke;
+    
+}
+
+.form__input--small {
+    max-width: 15em;
+}
+
+.form__label--checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+table,
+th,
+td {
+margin-bottom: 1em;
+padding: 0 1em;
+font-size:20px;
+}
+
+.form__radio input {
+    display: none;
+}
+
+.form__checkmark {
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+    border: 3px solid #00aee0;
+    padding: 0 0.10em 0;
+    display: block;
+    padding: .2em;
+    margin-left: 45%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.form__radio input[type="radio"]:checked~.form__checkmark:after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #00aeef;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    translate: 300ms ease-in-out 30s;
+}
+
+.btn 
+{
+    position: relative;
+    margin: 0 30%;
+    
+}
+
+

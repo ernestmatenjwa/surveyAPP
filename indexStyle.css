@@ -1,0 +1,63 @@
+
+ .img {
+     background: silver;
+     background-image: url("Images/indexDisplay.jpeg");
+     background-repeat: no-repeat;
+     background-position: center;
+     
+ }
+
+ .card-img-top{
+     width: 500px;
+     height: 200px;
+     margin:0 auto;
+ }
+ 
+ /* .button {
+     display: inline-block;
+     padding: 20px;
+     font-size: 30px;
+     text-align: center;
+     text-decoration: none;
+     color: yellowgreen;
+     background-color: sienna;
+     border: none;
+     border-radius: 5px;
+ }
+  */
+ .button:hover {
+     background-color: gray;
+ }
+ 
+ .btn 
+ {
+     margin: 0 auto;
+     margin: 1% 41.5% 0%;
+     width: 10.5em;
+ }
+ 
+ .card{
+     margin : 0 auto;
+     width: 50%;
+ }
+
+ 
+ .btn__possition {
+     margin: 8% 41.5% 0%;
+ }
+ 
+ .btn__possition--btn2 {
+     margin: 1em 40% 0%;
+ }
+ 
+ h1 {
+     margin: 1% 28% 0%;
+     color: #069696;
+     font-size: 0.2em;
+     font-weight: 800;
+
+
+
+     text-align: center;
+     
+ }
